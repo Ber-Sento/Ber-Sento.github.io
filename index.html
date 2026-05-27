@@ -6,6 +6,47 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<style>
+		/* subtle visual tuning for balance + grouping */
+		#main {
+			padding-top: 2rem;
+		}
+
+		.post {
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 2.5rem;
+			transition: transform 0.2s ease;
+		}
+
+		.post:hover {
+			transform: translateY(-2px);
+		}
+
+		.post.featured {
+			border-left: 4px solid #4a90e2;
+			padding-left: 1rem;
+		}
+
+		#sidebar .blurb,
+		#sidebar #intro {
+			border-radius: 10px;
+		}
+
+		.actions.pagination {
+			text-align: center;
+			margin-top: 3rem;
+		}
+
+		.actions.pagination .button {
+			min-width: 220px;
+		}
+
+		#header {
+			backdrop-filter: blur(6px);
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -25,24 +66,13 @@
 				<li><a href="#footer">Contact</a></li>
 			</ul>
 		</nav>
-
-		<nav class="main">
-			<ul>
-				<li class="search">
-					<a class="fa-search" href="#search">Search</a>
-					<form id="search" method="get" action="#">
-						<input type="text" name="query" placeholder="Search" />
-					</form>
-				</li>
-			</ul>
-		</nav>
 	</header>
 
 	<!-- Main -->
 	<div id="main">
 
-		<!-- FEATURE 1: NFC PROJECT -->
-		<article class="post">
+		<!-- FEATURE 1 -->
+		<article class="post featured">
 			<header>
 				<div class="title">
 					<h2><a href="nfc-project.html">NFC Embedded 3D Printed Stand</a></h2>
@@ -67,17 +97,12 @@
 				<ul class="actions">
 					<li><a href="nfc-project.html" class="button large">View Project</a></li>
 				</ul>
-				<ul class="stats">
-					<li><a href="#">Fusion 360</a></li>
-					<li><a href="#">PLA+</a></li>
-					<li><a href="#">NFC NTAG215</a></li>
-				</ul>
 			</footer>
 		</article>
 
 
-		<!-- FEATURE 2: FUEL CELL PUBLICATION -->
-		<article class="post">
+		<!-- FEATURE 2 -->
+		<article class="post featured">
 			<header>
 				<div class="title">
 					<h2><a href="fuel-cell-paper.html">Hydrogen Fuel Cell Performance Analysis (Co-Author)</a></h2>
@@ -102,57 +127,40 @@
 				<ul class="actions">
 					<li><a href="fuel-cell-paper.html" class="button large">View Publication</a></li>
 				</ul>
-				<ul class="stats">
-					<li><a href="#">Research</a></li>
-					<li><a href="#">Hydrogen Fuel Cell</a></li>
-					<li><a href="#">Publication</a></li>
-				</ul>
 			</footer>
 		</article>
 
 
-		<!-- FEATURE 3: PLACEHOLDER / FUTURE PROJECT -->
-		<article class="post">
+		<!-- FEATURE 3 -->
+		<article class="post featured">
 			<header>
 				<div class="title">
-					<h2><a href="#">FEM-Based Gear Contact Stress Optimization using ANSYS Mechanical</a></h2>
-					<p>Parametric study of gear geometry to minimize contact stress and deformation using FEM simulation.</p>
+					<h2><a href="projects.html">FEM Gear Contact Stress Optimization (ANSYS)</a></h2>
+					<p>Parametric FEM study of gear contact stress and deformation optimization.</p>
 				</div>
 				<div class="meta">
 					<time class="published" datetime="2026-01">2026</time>
 				</div>
 			</header>
 
-			<a href="#" class="image featured">
-				<img src="images/stress-contour-plot.jpg" alt="Simulation" />
+			<a href="projects.html" class="image featured">
+				<img src="images/stress-contour-plot.jpg" alt="FEM Simulation" />
 			</a>
 
 			<p>
-				Conducted finite element analysis of a meshing gear system using ANSYS Mechanical to evaluate contact stress and structural deformation. A parametric study was performed to optimize gear geometry, reducing peak stress and improving mechanical performance. Mesh refinement and geometry simplification were applied to improve computational efficiency without sacrificing critical contact accuracy.
+				Finite element analysis of meshing gears using ANSYS Mechanical. Focused on contact stress reduction
+				through geometry optimization, mesh refinement, and parametric design iteration for performance improvement.
 			</p>
 
 			<footer>
 				<ul class="actions">
-					<li><a href="projects.html" class="button large">View Project</a></li>
-				</ul>
-				<ul class="stats">
-					<li><a href="#">ANSYS</a></li>
-					<li><a href="#">FEM</a></li>
-					<li><a href="#">Parametric Study</a></li>
-					<li><a href="#">Structural Analysis</a></li>
+					<li><a href="projects.html" class="button large">Explore All Projects</a></li>
 				</ul>
 			</footer>
 		</article>
 
-		<!-- SINGLE BUTTON -->
-		<ul class="actions pagination">
-			<li>
-				<a href="projects.html" class="button large next">Explore All Projects</a>
-			</li>
-		</ul>
 
 	</div>
-
 
 	<!-- Sidebar -->
 	<section id="sidebar">
@@ -171,9 +179,9 @@
 		<section class="blurb">
 			<h2>About</h2>
 			<p>
-				I am an engineering student focused on robotics, CAD design, and computational simulation.
-				I enjoy building practical systems through 3D printing and FEM analysis.
-				Currently preparing for graduate research opportunities in Japan.
+				Engineering student focused on robotics, CAD design, and computational simulation.
+				Enjoys building practical systems through 3D printing and FEM analysis.
+				Preparing for graduate research opportunities in Japan.
 			</p>
 
 			<ul class="actions">
@@ -196,14 +204,13 @@
 		<section id="footer">
 			<ul class="icons">
 				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 			</ul>
 
 			<p class="copyright">
-				© 2026 Bernat Sentosa. Engineering Portfolio.<br />
-				Designed using HTML5 UP template.
+				© 2026 Bernat Sentosa<br />
+				Engineering Portfolio
 			</p>
 		</section>
 
