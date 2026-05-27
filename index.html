@@ -1,77 +1,18 @@
 <!DOCTYPE HTML>
+<!-- Bernat Sentosa Portfolio - Clean Future Imperfect Build -->
 <html>
 <head>
 	<title>Bernat Sentosa | Engineering Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-
-	<!-- MOBILE MENU STYLES -->
-	<style>
-
-	/* Hide mobile button on desktop */
-	.mobile-menu-button {
-		display: none;
-		font-size: 22px;
-		position: absolute;
-		right: 20px;
-		top: 18px;
-		z-index: 10001;
-	}
-
-	/* Mobile menu panel */
-	#mobile-menu {
-		display: none;
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 80%;
-		height: 100%;
-		background: white;
-		z-index: 10000;
-		padding: 2rem;
-		box-shadow: -5px 0 30px rgba(0,0,0,0.2);
-	}
-
-	#mobile-menu:target {
-		display: block;
-	}
-
-	#mobile-menu ul {
-		list-style: none;
-		padding: 0;
-	}
-
-	#mobile-menu ul li {
-		margin: 1rem 0;
-	}
-
-	#mobile-menu ul li a {
-		font-size: 18px;
-		text-decoration: none;
-	}
-
-	/* MOBILE ONLY */
-	@media screen and (max-width: 980px) {
-
-		.mobile-menu-button {
-			display: block;
-		}
-
-		/* Optional: compact sidebar spacing */
-		#sidebar #intro p {
-			font-size: 13px;
-		}
-	}
-
-	</style>
 </head>
 
 <body class="is-preload">
 
 <div id="wrapper">
 
-	<!-- HEADER -->
+	<!-- Header -->
 	<header id="header">
 		<h1><a href="index.html">Bernat Sentosa</a></h1>
 
@@ -85,46 +26,68 @@
 			</ul>
 		</nav>
 
-		<!-- MOBILE BUTTON -->
-		<a href="#mobile-menu" class="mobile-menu-button fa-bars"></a>
-
+		<nav class="main">
+			<ul>
+				<li class="search">
+					<a class="fa-search" href="#search">Search</a>
+					<form id="search" method="get" action="#">
+						<input type="text" name="query" placeholder="Search" />
+					</form>
+				</li>
+				<li class="menu">
+					<a class="fa-bars" href="#menu">Menu</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
 
-	<!-- MOBILE MENU -->
-	<nav id="mobile-menu">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="projects.html">Projects</a></li>
-			<li><a href="publications.html">Publications</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="#footer">Contact</a></li>
-		</ul>
+	<!-- Menu (MOBILE OFF-CANVAS - ORIGINAL TEMPLATE) -->
+	<section id="menu">
 
-		<br/>
-		<a href="#" class="button">Close</a>
-	</nav>
+		<section>
+			<form class="search" method="get" action="#">
+				<input type="text" name="query" placeholder="Search" />
+			</form>
+		</section>
 
-	<!-- MAIN -->
+		<section>
+			<ul class="links">
+				<li><a href="index.html"><h3>Home</h3></a></li>
+				<li><a href="projects.html"><h3>Projects</h3></a></li>
+				<li><a href="publications.html"><h3>Publications</h3></a></li>
+				<li><a href="about.html"><h3>About</h3></a></li>
+			</ul>
+		</section>
+
+		<section>
+			<ul class="actions stacked">
+				<li><a href="#footer" class="button large fit">Contact</a></li>
+			</ul>
+		</section>
+
+	</section>
+
+	<!-- Main -->
 	<div id="main">
 
-		<!-- NFC -->
+		<!-- FEATURE 1 -->
 		<article class="post">
 			<header>
 				<div class="title">
 					<h2><a href="nfc-project.html">NFC Embedded 3D Printed Stand</a></h2>
-					<p>Embedded NFC system integrated into functional 3D printed structure.</p>
+					<p>Interactive embedded NFC system inside functional 3D printed structure.</p>
 				</div>
 				<div class="meta">
-					<time class="published">May 2026</time>
+					<time class="published" datetime="2026-05">May 2026</time>
 				</div>
 			</header>
 
 			<a href="nfc-project.html" class="image featured">
-				<img src="images/nfc-stand.jpg" alt="" />
+				<img src="images/nfc-stand.jpg" alt="NFC Stand" />
 			</a>
 
 			<p>
-				Designed a PLA NFC stand integrating NTAG technology for interactive digital linking and product demonstration.
+				Designed and fabricated a custom 3D printed NFC stand with embedded NTAG technology for interactive product presentation and structural testing of signal transmission through PLA.
 			</p>
 
 			<footer>
@@ -134,24 +97,24 @@
 			</footer>
 		</article>
 
-		<!-- HYDROGEN -->
+		<!-- FEATURE 2 -->
 		<article class="post">
 			<header>
 				<div class="title">
-					<h2><a href="fuel-cell-paper.html">Hydrogen Fuel Cell Performance Analysis</a></h2>
-					<p>Experimental evaluation of hydrogen fuel cell system performance.</p>
+					<h2><a href="fuel-cell-paper.html">Hydrogen Fuel Cell Performance Study</a></h2>
+					<p>Experimental analysis of hydrogen fuel cell efficiency and system behavior.</p>
 				</div>
 				<div class="meta">
-					<time class="published">Oct 2025</time>
+					<time class="published" datetime="2025-10">Oct 2025</time>
 				</div>
 			</header>
 
 			<a href="fuel-cell-paper.html" class="image featured">
-				<img src="images/fuel-cell.jpg" alt="" />
+				<img src="images/fuel-cell.jpg" alt="Fuel Cell" />
 			</a>
 
 			<p>
-				Performed experimental data analysis for hydrogen fuel cell performance study and contributed as co-author in publication.
+				Data-driven evaluation of hydrogen fuel cell performance including efficiency characterization and system response under controlled experimental conditions.
 			</p>
 
 			<footer>
@@ -161,24 +124,24 @@
 			</footer>
 		</article>
 
-		<!-- FEM -->
+		<!-- FEATURE 3: FEM -->
 		<article class="post">
 			<header>
 				<div class="title">
-					<h2><a href="projects.html">FEM Gear Contact Optimization (ANSYS)</a></h2>
-					<p>Finite element analysis of gear contact stress and parametric optimization.</p>
+					<h2><a href="projects.html">FEM Gear Contact Stress Optimization (ANSYS)</a></h2>
+					<p>Finite element simulation of gear interaction with parametric optimization.</p>
 				</div>
 				<div class="meta">
-					<time class="published">2026</time>
+					<time class="published" datetime="2026-01">2026</time>
 				</div>
 			</header>
 
 			<a href="projects.html" class="image featured">
-				<img src="images/stress-contour-plot.jpg" alt="" />
+				<img src="images/stress-contour-plot.jpg" alt="FEM Gear Simulation" />
 			</a>
 
 			<p>
-				Performed FEM simulation of gear system using ANSYS Mechanical, optimizing geometry and reducing stress concentration.
+				Finite element analysis of meshing gears using ANSYS Mechanical with geometry simplification, mesh optimization, and parametric study to minimize contact stress and deformation efficiently.
 			</p>
 
 			<footer>
@@ -188,30 +151,37 @@
 			</footer>
 		</article>
 
-		<!-- EXPLORE BUTTONS -->
+		<!-- SINGLE BUTTON -->
 		<ul class="actions pagination">
-			<li><a href="projects.html" class="button large">Explore All Projects</a></li>
-			<li><a href="publications.html" class="button large">Explore All Publications</a></li>
+			<li>
+				<a href="projects.html" class="button large next">Visit Project Page</a>
+			</li>
+			<li>
+				<a href="publications.html" class="button large next">Visit Publication Page</a>
+			</li>
 		</ul>
 
 	</div>
 
-	<!-- SIDEBAR (UNCHANGED DESKTOP) -->
+	<!-- Sidebar -->
 	<section id="sidebar">
 
+		<!-- Intro -->
 		<section id="intro">
-			<a href="#" class="logo"><img src="images/logos.jpg" alt="" /></a>
+			<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
 			<header>
 				<h2>Bernat Sentosa</h2>
 				<p>Mechanical Engineering • Robotics • 3D Printing</p>
 			</header>
 		</section>
 
+		<!-- About -->
 		<section class="blurb">
 			<h2>About</h2>
 			<p>
-				Engineering student focused on robotics, CAD, and simulation.
-				Building systems through 3D printing and FEM analysis.
+				I am an engineering student focused on robotics, CAD design, and computational simulation.
+				I enjoy building practical systems through 3D printing and FEM analysis.
+				Currently preparing for graduate research opportunities in Japan.
 			</p>
 
 			<ul class="actions">
@@ -219,23 +189,25 @@
 			</ul>
 		</section>
 
+		<!-- Links -->
 		<section class="blurb">
 			<h2>Links</h2>
 			<ul class="actions stacked">
-				<li><a href="https://github.com/Ber-Sento" class="button">GitHub</a></li>
-				<li><a href="cv.pdf" class="button">Download CV</a></li>
+				<li><a href="https://github.com/Ber-Sento" class="button" target="_blank">GitHub</a></li>
+				<li><a href="cv.pdf" class="button" target="_blank">Download CV</a></li>
 			</ul>
 		</section>
 
+		<!-- Social -->
 		<section id="footer">
 			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"></a></li>
-				<li><a href="#" class="icon brands fa-instagram"></a></li>
-				<li><a href="#" class="icon solid fa-envelope"></a></li>
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 			</ul>
 
 			<p class="copyright">
-				© 2026 Bernat Sentosa • Engineering Portfolio
+				© 2026 Bernat Sentosa. Engineering Portfolio.
 			</p>
 		</section>
 
@@ -243,7 +215,7 @@
 
 </div>
 
-<!-- SCRIPTS -->
+<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
