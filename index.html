@@ -5,13 +5,73 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<!-- MOBILE MENU STYLES -->
+	<style>
+
+	/* Hide mobile button on desktop */
+	.mobile-menu-button {
+		display: none;
+		font-size: 22px;
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		z-index: 10001;
+	}
+
+	/* Mobile menu panel */
+	#mobile-menu {
+		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 80%;
+		height: 100%;
+		background: white;
+		z-index: 10000;
+		padding: 2rem;
+		box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+	}
+
+	#mobile-menu:target {
+		display: block;
+	}
+
+	#mobile-menu ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	#mobile-menu ul li {
+		margin: 1rem 0;
+	}
+
+	#mobile-menu ul li a {
+		font-size: 18px;
+		text-decoration: none;
+	}
+
+	/* MOBILE ONLY */
+	@media screen and (max-width: 980px) {
+
+		.mobile-menu-button {
+			display: block;
+		}
+
+		/* Optional: compact sidebar spacing */
+		#sidebar #intro p {
+			font-size: 13px;
+		}
+	}
+
+	</style>
 </head>
 
 <body class="is-preload">
 
 <div id="wrapper">
 
-	<!-- Header -->
+	<!-- HEADER -->
 	<header id="header">
 		<h1><a href="index.html">Bernat Sentosa</a></h1>
 
@@ -25,27 +85,34 @@
 			</ul>
 		</nav>
 
-		<nav class="main">
-			<ul>
-				<li class="search">
-					<a class="fa-search" href="#search">Search</a>
-					<form id="search" method="get" action="#">
-						<input type="text" name="query" placeholder="Search" />
-					</form>
-				</li>
-			</ul>
-		</nav>
+		<!-- MOBILE BUTTON -->
+		<a href="#mobile-menu" class="mobile-menu-button fa-bars"></a>
+
 	</header>
+
+	<!-- MOBILE MENU -->
+	<nav id="mobile-menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="publications.html">Publications</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="#footer">Contact</a></li>
+		</ul>
+
+		<br/>
+		<a href="#" class="button">Close</a>
+	</nav>
 
 	<!-- MAIN -->
 	<div id="main">
 
-		<!-- NFC PROJECT -->
+		<!-- NFC -->
 		<article class="post">
 			<header>
 				<div class="title">
 					<h2><a href="nfc-project.html">NFC Embedded 3D Printed Stand</a></h2>
-					<p>Embedded NFC system integrated into functional 3D printed design.</p>
+					<p>Embedded NFC system integrated into functional 3D printed structure.</p>
 				</div>
 				<div class="meta">
 					<time class="published">May 2026</time>
@@ -57,28 +124,22 @@
 			</a>
 
 			<p>
-				Designed a custom PLA stand integrating NTAG NFC technology for interactive digital linking.
-				Focused on mechanical fit, signal reliability through plastic enclosure, and clean industrial design.
+				Designed a PLA NFC stand integrating NTAG technology for interactive digital linking and product demonstration.
 			</p>
 
 			<footer>
 				<ul class="actions">
 					<li><a href="nfc-project.html" class="button large">View Project</a></li>
 				</ul>
-				<ul class="stats">
-					<li><a href="#">Fusion 360</a></li>
-					<li><a href="#">PLA+</a></li>
-					<li><a href="#">NTAG215</a></li>
-				</ul>
 			</footer>
 		</article>
 
-		<!-- HYDROGEN PUBLICATION -->
+		<!-- HYDROGEN -->
 		<article class="post">
 			<header>
 				<div class="title">
-					<h2><a href="fuel-cell-paper.html">Hydrogen Fuel Cell Performance Analysis (Co-Author)</a></h2>
-					<p>Experimental evaluation of hydrogen fuel cell efficiency under controlled conditions.</p>
+					<h2><a href="fuel-cell-paper.html">Hydrogen Fuel Cell Performance Analysis</a></h2>
+					<p>Experimental evaluation of hydrogen fuel cell system performance.</p>
 				</div>
 				<div class="meta">
 					<time class="published">Oct 2025</time>
@@ -90,58 +151,44 @@
 			</a>
 
 			<p>
-				Performed experimental data analysis on hydrogen fuel cell performance.
-				Work included efficiency evaluation, system behavior analysis, and data processing
-				contributing to a peer-reviewed publication as second author.
+				Performed experimental data analysis for hydrogen fuel cell performance study and contributed as co-author in publication.
 			</p>
 
 			<footer>
 				<ul class="actions">
 					<li><a href="fuel-cell-paper.html" class="button large">View Publication</a></li>
 				</ul>
-				<ul class="stats">
-					<li><a href="#">Research</a></li>
-					<li><a href="#">Fuel Cell</a></li>
-					<li><a href="#">Publication</a></li>
-				</ul>
 			</footer>
 		</article>
 
-		<!-- FEM PROJECT -->
+		<!-- FEM -->
 		<article class="post">
 			<header>
 				<div class="title">
 					<h2><a href="projects.html">FEM Gear Contact Optimization (ANSYS)</a></h2>
-					<p>Finite element analysis and parametric optimization of gear contact stress.</p>
+					<p>Finite element analysis of gear contact stress and parametric optimization.</p>
 				</div>
 				<div class="meta">
-					<time class="published">Jan 2026</time>
+					<time class="published">2026</time>
 				</div>
 			</header>
 
-			<a href="fem-gear-contact.html" class="image featured">
+			<a href="projects.html" class="image featured">
 				<img src="images/stress-contour-plot.jpg" alt="" />
 			</a>
 
 			<p>
-				Conducted FEM simulation of meshing gears using ANSYS Mechanical.
-				Applied mesh optimization and geometric reduction to improve computation efficiency
-				while maintaining accurate contact stress results.
+				Performed FEM simulation of gear system using ANSYS Mechanical, optimizing geometry and reducing stress concentration.
 			</p>
 
 			<footer>
 				<ul class="actions">
-					<li><a href="fem-gear-contact.html" class="button large">View Project</a></li>
-				</ul>
-				<ul class="stats">
-					<li><a href="#">ANSYS</a></li>
-					<li><a href="#">FEM</a></li>
-					<li><a href="#">Optimization</a></li>
+					<li><a href="projects.html" class="button large">View Project</a></li>
 				</ul>
 			</footer>
 		</article>
 
-		<!-- BUTTONS -->
+		<!-- EXPLORE BUTTONS -->
 		<ul class="actions pagination">
 			<li><a href="projects.html" class="button large">Explore All Projects</a></li>
 			<li><a href="publications.html" class="button large">Explore All Publications</a></li>
@@ -149,10 +196,9 @@
 
 	</div>
 
-	<!-- SIDEBAR -->
+	<!-- SIDEBAR (UNCHANGED DESKTOP) -->
 	<section id="sidebar">
 
-		<!-- Intro -->
 		<section id="intro">
 			<a href="#" class="logo"><img src="images/logos.jpg" alt="" /></a>
 			<header>
@@ -161,13 +207,11 @@
 			</header>
 		</section>
 
-		<!-- About -->
 		<section class="blurb">
 			<h2>About</h2>
 			<p>
-				Engineering student focused on robotics, CAD, and computational simulation.
-				Building practical systems through 3D printing and FEM analysis.
-				Preparing for graduate research in Japan.
+				Engineering student focused on robotics, CAD, and simulation.
+				Building systems through 3D printing and FEM analysis.
 			</p>
 
 			<ul class="actions">
@@ -175,20 +219,17 @@
 			</ul>
 		</section>
 
-		<!-- LINKS -->
 		<section class="blurb">
 			<h2>Links</h2>
 			<ul class="actions stacked">
-				<li><a href="https://github.com/Ber-Sento" class="button" target="_blank">GitHub</a></li>
-				<li><a href="cv.pdf" class="button" target="_blank">Download CV</a></li>
+				<li><a href="https://github.com/Ber-Sento" class="button">GitHub</a></li>
+				<li><a href="cv.pdf" class="button">Download CV</a></li>
 			</ul>
 		</section>
 
-		<!-- SOCIAL -->
 		<section id="footer">
 			<ul class="icons">
 				<li><a href="#" class="icon brands fa-twitter"></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"></a></li>
 				<li><a href="#" class="icon brands fa-instagram"></a></li>
 				<li><a href="#" class="icon solid fa-envelope"></a></li>
 			</ul>
@@ -202,6 +243,7 @@
 
 </div>
 
+<!-- SCRIPTS -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
