@@ -1,52 +1,10 @@
 <!DOCTYPE HTML>
-<!-- Future Imperfect by HTML5 UP (cleaned portfolio version) -->
 <html>
 <head>
 	<title>Bernat Sentosa | Engineering Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-
-	<style>
-		/* subtle visual tuning for balance + grouping */
-		#main {
-			padding-top: 2rem;
-		}
-
-		.post {
-			border-radius: 10px;
-			overflow: hidden;
-			margin-bottom: 2.5rem;
-			transition: transform 0.2s ease;
-		}
-
-		.post:hover {
-			transform: translateY(-2px);
-		}
-
-		.post.featured {
-			border-left: 4px solid #4a90e2;
-			padding-left: 1rem;
-		}
-
-		#sidebar .blurb,
-		#sidebar #intro {
-			border-radius: 10px;
-		}
-
-		.actions.pagination {
-			text-align: center;
-			margin-top: 3rem;
-		}
-
-		.actions.pagination .button {
-			min-width: 220px;
-		}
-
-		#header {
-			backdrop-filter: blur(6px);
-		}
-	</style>
 </head>
 
 <body class="is-preload">
@@ -66,103 +24,132 @@
 				<li><a href="#footer">Contact</a></li>
 			</ul>
 		</nav>
+
+		<nav class="main">
+			<ul>
+				<li class="search">
+					<a class="fa-search" href="#search">Search</a>
+					<form id="search" method="get" action="#">
+						<input type="text" name="query" placeholder="Search" />
+					</form>
+				</li>
+			</ul>
+		</nav>
 	</header>
 
-	<!-- Main -->
+	<!-- MAIN -->
 	<div id="main">
 
-		<!-- FEATURE 1 -->
-		<article class="post featured">
+		<!-- NFC PROJECT -->
+		<article class="post">
 			<header>
 				<div class="title">
 					<h2><a href="nfc-project.html">NFC Embedded 3D Printed Stand</a></h2>
-					<p>Embedded NFC-enabled PLA design for interactive product demonstration and digital linking.</p>
+					<p>Embedded NFC system integrated into functional 3D printed design.</p>
 				</div>
 				<div class="meta">
-					<time class="published" datetime="2026-05">May 2026</time>
+					<time class="published">May 2026</time>
 				</div>
 			</header>
 
 			<a href="nfc-project.html" class="image featured">
-				<img src="images/nfc-stand.jpg" alt="NFC Stand" />
+				<img src="images/nfc-stand.jpg" alt="" />
 			</a>
 
 			<p>
-				Designed and fabricated a custom 3D printed NFC stand with embedded NTAG technology for interactive
-				product presentation. Focused on structural design, reliable NFC signal transmission through PLA,
-				and clean industrial aesthetics.
+				Designed a custom PLA stand integrating NTAG NFC technology for interactive digital linking.
+				Focused on mechanical fit, signal reliability through plastic enclosure, and clean industrial design.
 			</p>
 
 			<footer>
 				<ul class="actions">
 					<li><a href="nfc-project.html" class="button large">View Project</a></li>
 				</ul>
+				<ul class="stats">
+					<li><a href="#">Fusion 360</a></li>
+					<li><a href="#">PLA+</a></li>
+					<li><a href="#">NTAG215</a></li>
+				</ul>
 			</footer>
 		</article>
 
-
-		<!-- FEATURE 2 -->
-		<article class="post featured">
+		<!-- HYDROGEN PUBLICATION -->
+		<article class="post">
 			<header>
 				<div class="title">
 					<h2><a href="fuel-cell-paper.html">Hydrogen Fuel Cell Performance Analysis (Co-Author)</a></h2>
-					<p>Experimental data-driven evaluation of hydrogen fuel cell system performance.</p>
+					<p>Experimental evaluation of hydrogen fuel cell efficiency under controlled conditions.</p>
 				</div>
 				<div class="meta">
-					<time class="published" datetime="2025-10">Oct 2025</time>
+					<time class="published">Oct 2025</time>
 				</div>
 			</header>
 
 			<a href="fuel-cell-paper.html" class="image featured">
-				<img src="images/fuel-cell.jpg" alt="Fuel Cell" />
+				<img src="images/fuel-cell.jpg" alt="" />
 			</a>
 
 			<p>
-				Contributed experimental data analysis for a hydrogen fuel cell performance study under supervised
-				research. Work included data processing, efficiency evaluation, and performance characterization,
-				later included in a peer-reviewed publication as second author.
+				Performed experimental data analysis on hydrogen fuel cell performance.
+				Work included efficiency evaluation, system behavior analysis, and data processing
+				contributing to a peer-reviewed publication as second author.
 			</p>
 
 			<footer>
 				<ul class="actions">
 					<li><a href="fuel-cell-paper.html" class="button large">View Publication</a></li>
 				</ul>
-			</footer>
-		</article>
-
-
-		<!-- FEATURE 3 -->
-		<article class="post featured">
-			<header>
-				<div class="title">
-					<h2><a href="projects.html">FEM Gear Contact Stress Optimization (ANSYS)</a></h2>
-					<p>Parametric FEM study of gear contact stress and deformation optimization.</p>
-				</div>
-				<div class="meta">
-					<time class="published" datetime="2026-01">2026</time>
-				</div>
-			</header>
-
-			<a href="projects.html" class="image featured">
-				<img src="images/stress-contour-plot.jpg" alt="FEM Simulation" />
-			</a>
-
-			<p>
-				Finite element analysis of meshing gears using ANSYS Mechanical. Focused on contact stress reduction
-				through geometry optimization, mesh refinement, and parametric design iteration for performance improvement.
-			</p>
-
-			<footer>
-				<ul class="actions">
-					<li><a href="projects.html" class="button large">Explore All Projects</a></li>
+				<ul class="stats">
+					<li><a href="#">Research</a></li>
+					<li><a href="#">Fuel Cell</a></li>
+					<li><a href="#">Publication</a></li>
 				</ul>
 			</footer>
 		</article>
 
+		<!-- FEM PROJECT -->
+		<article class="post">
+			<header>
+				<div class="title">
+					<h2><a href="projects.html">FEM Gear Contact Optimization (ANSYS)</a></h2>
+					<p>Finite element analysis and parametric optimization of gear contact stress.</p>
+				</div>
+				<div class="meta">
+					<time class="published">2026</time>
+				</div>
+			</header>
+
+			<a href="projects.html" class="image featured">
+				<img src="images/stress-contour-plot.jpg" alt="" />
+			</a>
+
+			<p>
+				Conducted FEM simulation of meshing gears using ANSYS Mechanical.
+				Applied mesh optimization and geometric reduction to improve computation efficiency
+				while maintaining accurate contact stress results.
+			</p>
+
+			<footer>
+				<ul class="actions">
+					<li><a href="projects.html" class="button large">View Project</a></li>
+				</ul>
+				<ul class="stats">
+					<li><a href="#">ANSYS</a></li>
+					<li><a href="#">FEM</a></li>
+					<li><a href="#">Optimization</a></li>
+				</ul>
+			</footer>
+		</article>
+
+		<!-- BUTTONS -->
+		<ul class="actions pagination">
+			<li><a href="projects.html" class="button large">Explore All Projects</a></li>
+			<li><a href="publications.html" class="button large">Explore All Publications</a></li>
+		</ul>
 
 	</div>
 
-	<!-- Sidebar -->
+	<!-- SIDEBAR -->
 	<section id="sidebar">
 
 		<!-- Intro -->
@@ -174,14 +161,13 @@
 			</header>
 		</section>
 
-
 		<!-- About -->
 		<section class="blurb">
 			<h2>About</h2>
 			<p>
-				Engineering student focused on robotics, CAD design, and computational simulation.
-				Enjoys building practical systems through 3D printing and FEM analysis.
-				Preparing for graduate research opportunities in Japan.
+				Engineering student focused on robotics, CAD, and computational simulation.
+				Building practical systems through 3D printing and FEM analysis.
+				Preparing for graduate research in Japan.
 			</p>
 
 			<ul class="actions">
@@ -189,8 +175,7 @@
 			</ul>
 		</section>
 
-
-		<!-- Links -->
+		<!-- LINKS -->
 		<section class="blurb">
 			<h2>Links</h2>
 			<ul class="actions stacked">
@@ -199,18 +184,17 @@
 			</ul>
 		</section>
 
-
-		<!-- Social -->
+		<!-- SOCIAL -->
 		<section id="footer">
 			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="#" class="icon brands fa-twitter"></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"></a></li>
+				<li><a href="#" class="icon brands fa-instagram"></a></li>
+				<li><a href="#" class="icon solid fa-envelope"></a></li>
 			</ul>
 
 			<p class="copyright">
-				© 2026 Bernat Sentosa<br />
-				Engineering Portfolio
+				© 2026 Bernat Sentosa • Engineering Portfolio
 			</p>
 		</section>
 
@@ -218,7 +202,6 @@
 
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
