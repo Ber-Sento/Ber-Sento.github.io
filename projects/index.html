@@ -1,8 +1,9 @@
+```html
 <!DOCTYPE HTML>
-<!-- Bernat Sentosa Portfolio - Clean Future Imperfect Build--> 
+<!-- Bernat Sentosa Portfolio - Clean Future Imperfect Build -->
 <html>
 <head>
-	<title>Bernat Sentosa | Engineering Portfolio</title>
+	<title>Projects | Albertus Bernat Sentosa</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/assets/css/main.css" />
@@ -19,9 +20,9 @@
 		<nav class="links">
 			<ul>
 				<li><a href="/">Home</a></li>
-				<li><a href="/projects/">Projects</a></li>
-				<li><a href="/publications/">Publications</a></li>
+				<li><a href="/research-experience/">Research and Experience</a></li>
 				<li><a href="/about/">About</a></li>
+				<li><a href="/projects/">Projects</a></li>
 				<li><a href="/contact/">Contact</a></li>
 			</ul>
 		</nav>
@@ -41,7 +42,7 @@
 		</nav>
 	</header>
 
-	<!-- Menu (MOBILE OFF-CANVAS - ORIGINAL TEMPLATE) -->
+	<!-- Mobile Menu -->
 	<section id="menu">
 
 		<section>
@@ -53,15 +54,17 @@
 		<section>
 			<ul class="links">
 				<li><a href="/"><h3>Home</h3></a></li>
-				<li><a href="/projects/"><h3>Projects</h3></a></li>
-				<li><a href="/publications/"><h3>Publications</h3></a></li>
+				<li><a href="/research-experience/"><h3>Research and Experience</h3></a></li>
 				<li><a href="/about/"><h3>About</h3></a></li>
+				<li><a href="/projects/"><h3>Projects</h3></a></li>
 			</ul>
 		</section>
 
 		<section>
 			<ul class="actions stacked">
-				<li><a href="/contact/" class="button large fit">Contact</a></li>
+				<li>
+					<a href="/contact/" class="button large fit">Contact</a>
+				</li>
 			</ul>
 		</section>
 
@@ -69,60 +72,71 @@
 
 	<!-- Main -->
 	<div id="main">
-		
-		<!-- PAGE INTRO -->
+
+		<!-- Page Introduction -->
 		<section style="text-align: center; margin-bottom: 4em; padding-top: 1em;">
 			<h1 style="margin-bottom: 0.3em;">Projects</h1>
 
 			<p style="font-size: 1rem;">
-				A collection of engineering projects focused on robotics, simulation, embedded systems, and digital fabrication.
-				Combining CAD design, FEM analysis, and prototyping to develop practical mechanical and robotic solutions.
+				A collection of personal and engineering projects focused on
+				robotics, embedded systems, automation, and practical prototyping.
+				These projects reflect my interest in integrating mechanical
+				design, electronics, and software into functional systems.
 			</p>
 		</section>
 
-		<!-- PROJECT: 3D Printer 5 Axis -->
+		<!-- PROJECT: Desktop Companion Robot -->
 		<article class="post">
 			<header>
 				<div class="title">
-					<h2><a href="#">Development of a 5-Axis 3D Printing Slicer</a></h2>
-					<p>Work in progress: software framework for multi-axis additive manufacturing.</p>
+					<h2>Desktop Companion Robot</h2>
+					<p>Work in progress: an interactive desktop companion integrating embedded hardware and local AI.</p>
 				</div>
 				<div class="meta">
 					<time class="published" datetime="2026">2026</time>
 				</div>
 			</header>
-		
+
 			<a href="#" class="image featured">
-				<img src="/images/3d-printer-5-axis.jpg" alt="5-Axis Printing" />
+				<img src="/images/desktop-companion-robot.jpg"
+					 alt="Desktop Companion Robot prototype" />
 			</a>
 
 			<p>
-				Developing a software slicer for 5-axis 3D printing systems capable of generating
-				non-planar toolpaths and machine-compatible G-code. The project integrates geometric
-				processing, coordinate transformation, and multi-axis motion planning to expand
-				additive manufacturing capabilities beyond conventional layer-by-layer printing.
+				Developing a desktop companion system that combines an
+				ESP32-S3 microcontroller, an OLED facial display, audio input
+				and output, and locally hosted AI software. The project explores
+				embedded system integration and natural interaction through
+				voice and a simple visual interface. Hardware and software
+				integration are currently in progress.
 			</p>
 
 			<footer>
 				<ul class="actions">
-					<li><a href="#" class="button large">Work in Progress</a></li>
+					<li>
+						<a href="#" class="button large">Work in Progress</a>
+					</li>
 				</ul>
 
 				<ul class="stats">
 					<li><a href="#">Robotics</a></li>
-					<li><a href="#">Software Development</a></li>
-					<li><a href="#">Additive Manufacturing</a></li>
-					<li><a href="#">5-Axis Printing</a></li>
+					<li><a href="#">Embedded Systems</a></li>
+					<li><a href="#">ESP32</a></li>
+					<li><a href="#">Local AI</a></li>
 				</ul>
 			</footer>
 		</article>
-		
+
 		<!-- PROJECT: NFC TAG -->
 		<article class="post">
 			<header>
 				<div class="title">
-					<h2><a href="/projects/nfc-project/">Embedded NFC Systems in Additively Manufactured Structures</a></h2>
-					<p>Interactive embedded NFC system inside functional 3D printed structure.</p>
+					<h2>
+						<a href="/projects/nfc-project/">
+							Embedded NFC Systems in Additively Manufactured Structures
+						</a>
+					</h2>
+					<p>Interactive NFC integration within a functional 3D-printed structure.</p>
 				</div>
 				<div class="meta">
 					<time class="published" datetime="2026-05">May 2026</time>
@@ -134,51 +148,25 @@
 			</a>
 
 			<p>
-				Designed and fabricated a custom 3D printed NFC stand with embedded NTAG technology for interactive product presentation and structural testing of signal transmission through PLA.
+				Designed and fabricated a custom 3D-printed NFC stand with
+				embedded NTAG technology for interactive product presentation
+				and structural testing of signal transmission through PLA.
 			</p>
 
 			<footer>
 				<ul class="actions">
-					<li><a href="/projects/nfc-project/" class="button large">View Project</a></li>
+					<li>
+						<a href="/projects/nfc-project/" class="button large">
+							View Project
+						</a>
+					</li>
 				</ul>
+
 				<ul class="stats">
-					<li><a href="#">3D Printing</a></li>
 					<li><a href="#">Embedded Systems</a></li>
 					<li><a href="#">NFC</a></li>
 					<li><a href="#">Product Design</a></li>
-				</ul>
-			</footer>
-		</article>
-
-		<!-- PROJECT: FEM -->
-		<article class="post">
-			<header>
-				<div class="title">
-					<h2><a href="/projects/fem-gear/">FEM Gear Contact Stress Optimization (ANSYS)</a></h2>
-					<p>Finite element simulation of gear interaction with parametric optimization.</p>
-				</div>
-				<div class="meta">
-					<time class="published" datetime="2026-01">Jan 2026</time>
-				</div>
-			</header>
-
-			<a href="/projects/fem-gear/" class="image featured">
-				<img src="/images/stress-contour-plot.jpg" alt="FEM Gear Simulation" />
-			</a>
-
-			<p>
-				Finite element analysis of meshing gears using ANSYS Mechanical with geometry simplification, mesh optimization, and parametric study to minimize contact stress and deformation efficiently.
-			</p>
-
-			<footer>
-				<ul class="actions">
-					<li><a href="/projects/fem-gear/" class="button large">View Project</a></li>
-				</ul>
-				<ul class="stats">
-					<li><a href="#">FEM</a></li>
-					<li><a href="#">ANSYS Mechanical</a></li>
-					<li><a href="#">Structural Analysis</a></li>
-					<li><a href="#">Parametric Optimization</a></li>
+					<li><a href="#">Prototyping</a></li>
 				</ul>
 			</footer>
 		</article>
@@ -196,3 +184,4 @@
 
 </body>
 </html>
+```
