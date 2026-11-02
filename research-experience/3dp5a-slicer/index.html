@@ -1,1 +1,384 @@
-a
+
+<!DOCTYPE HTML>
+<!-- Bernat Sentosa Portfolio - 5-Axis 3D Printing Slicer -->
+<html>
+<head>
+	<title>Development of a 3D Model Slicer for a 5-Axis 3D Printer | Bernat Sentosa</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="/">Bernat Sentosa</a></h1>
+
+		<nav class="links">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/research-experience/">Research and Experience</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/projects/">Projects</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+		</nav>
+
+		<nav class="main">
+			<ul>
+				<li class="search">
+					<a class="fa-search" href="#search">Search</a>
+					<form id="search" method="get" action="#">
+						<input type="text" name="query" placeholder="Search" />
+					</form>
+				</li>
+				<li class="menu">
+					<a class="fa-bars" href="#menu">Menu</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Mobile Menu -->
+	<section id="menu">
+
+		<section>
+			<form class="search" method="get" action="#">
+				<input type="text" name="query" placeholder="Search" />
+			</form>
+		</section>
+
+		<section>
+			<ul class="links">
+				<li><a href="/"><h3>Home</h3></a></li>
+				<li><a href="/research-experience/"><h3>Research and Experience</h3></a></li>
+				<li><a href="/about/"><h3>About</h3></a></li>
+				<li><a href="/projects/"><h3>Projects</h3></a></li>
+			</ul>
+		</section>
+
+		<section>
+			<ul class="actions stacked">
+				<li><a href="/contact/" class="button large fit">Contact</a></li>
+			</ul>
+		</section>
+
+	</section>
+
+	<!-- Main -->
+	<div id="main">
+
+		<article class="post">
+
+			<!-- Project Header -->
+			<header>
+				<div class="title">
+					<h2>Development of a 3D Model Slicer for a 5-Axis 3D Printer</h2>
+					<p>
+						Undergraduate Thesis |
+						Multi-Axis Additive Manufacturing
+					</p>
+				</div>
+				<div class="meta">
+					<time class="published" datetime="2026">2026</time>
+				</div>
+			</header>
+
+			<!-- Main Project Image -->
+			<span class="image featured">
+				<img src="/images/3d-printer-5-axis.jpg"
+					alt="Five-axis 3D printer and slicer development project" />
+			</span>
+
+			<!-- Overview -->
+			<h2>Project Overview</h2>
+
+			<p>
+				This undergraduate thesis focused on developing a dedicated software
+				slicer for a five-axis 3D printer. Conventional three-axis 3D printing
+				deposits material in planar layers, which can require support structures
+				when manufacturing geometries with overhanging features.
+			</p>
+
+			<p>
+				The objective was to develop a slicing workflow that could account for
+				the printer's additional rotational axes. The resulting software
+				implemented segment-based slicing, orientation planning, coordinate
+				transformations, and G-code processing to generate machine-compatible
+				instructions for the 3DP-5A printer.
+			</p>
+
+			<hr />
+
+			<!-- Personal Contribution -->
+			<h2>My Contribution</h2>
+
+			<p>
+				I independently developed the complete slicer software, from researching
+				the underlying slicing algorithms to implementing the processing
+				workflow and graphical user interface. This included integrating
+				PrusaSlicer as the standard slicing engine and developing additional
+				processing stages to adapt its output for the five-axis machine.
+			</p>
+
+			<p>
+				The printer hardware was developed separately by my teammate. We
+				collaborated during the physical testing of the system.
+			</p>
+
+			<hr />
+
+			<!-- Methodology -->
+			<h2>Methodology and Software Development</h2>
+
+			<p>
+				The development followed an iterative research and development process.
+				I studied conventional slicing fundamentals, investigated possible
+				algorithmic approaches, tested them using STL models, and refined the
+				software based on the observed results. The implementation was then
+				integrated with the printer for G-code and physical testing.
+			</p>
+
+			<h3>Segment-Based Slicing</h3>
+
+			<p>
+				The STL model was divided into segments according to changes in
+				orientation. Each segment was processed through a slicing workflow
+				that used coordinate transformations to align its geometry for
+				planar slicing.
+			</p>
+
+			<h3>Center Layer Generation</h3>
+
+			<p>
+				Layer center points were generated to support orientation planning.
+				By comparing the positions of successive layer centers, the software
+				determined the orientation needed for the corresponding segment.
+			</p>
+
+			<h3>Orientation Planning and Coordinate Transformation</h3>
+
+			<p>
+				The software used matrix transformations to align each segment for
+				slicing while retaining its orientation information. After the
+				standard slicing process, the generated toolpath coordinates were
+				transformed back into the machine coordinate system.
+			</p>
+
+			<h3>G-code Processing</h3>
+
+			<p>
+				PrusaSlicer was integrated as the standard slicing engine. A custom
+				post-processing workflow transformed the generated G-code into
+				machine-compatible instructions for the 3DP-5A printer.
+			</p>
+
+			<!-- Software Workflow Diagram -->
+			<h3>Software Workflow</h3>
+
+			<span class="image featured">
+				<img src="/images/3dp5a-slicer-workflow.jpg"
+					alt="Software workflow diagram of the five-axis 3D printing slicer" />
+			</span>
+
+			<p class="image-caption">
+				Software workflow developed for the 3DP-5A slicer.
+			</p>
+
+			<hr />
+
+			<!-- Experimental Results -->
+			<h2>Experimental Results</h2>
+
+			<p>
+				The developed slicer was tested through physical printing using a
+				solid cylinder model with a 30-degree bend. The five-axis printer
+				successfully printed the bent cylinder without support structures.
+				During printing, the machine bed rotated up to 30 degrees, with its
+				starting orientation determined by the developed algorithm.
+			</p>
+
+			<!-- Five-Axis Print -->
+			<h3>Five-Axis 3D Printer</h3>
+
+			<span class="image featured">
+				<img src="/images/3dp5a-bent-cylinder.jpg"
+					alt="Solid cylinder with a 30-degree bend printed using the five-axis 3D printer without support" />
+			</span>
+
+			<p class="image-caption">
+				Solid cylinder with a 30-degree bend, printed without support
+				using the 3DP-5A printer.
+			</p>
+
+			<!-- Bambu Comparison -->
+			<h3>Bambu Lab A1 Mini Comparison</h3>
+
+			<p>
+				The same STL design was also printed using a Bambu Lab A1 Mini as a
+				comparison. The conventional printer used support structures for
+				the bent geometry.
+			</p>
+
+			<div class="row">
+				<div class="col-6 col-12-medium">
+					<span class="image fit">
+						<img src="/images/3dp5a-cylinder-result.jpg"
+							alt="Bent cylinder printed using the five-axis 3D printer" />
+					</span>
+					<p class="image-caption">
+						3DP-5A: printed without support.
+					</p>
+				</div>
+
+				<div class="col-6 col-12-medium">
+					<span class="image fit">
+						<img src="/images/bambu-a1-mini-cylinder.jpg"
+							alt="Bent cylinder printed using the Bambu Lab A1 Mini with support structures" />
+					</span>
+					<p class="image-caption">
+						Bambu Lab A1 Mini: printed with support.
+					</p>
+				</div>
+			</div>
+
+			<h3>Dimensional Comparison</h3>
+
+			<p>
+				Dimensional deviation was evaluated by comparing the physical prints
+				with the original STL design. The measured deviations were:
+			</p>
+
+			<ul>
+				<li><strong>3DP-5A:</strong> 0.95% dimensional deviation.</li>
+				<li><strong>Bambu Lab A1 Mini:</strong> 0.885% dimensional deviation.</li>
+			</ul>
+
+			<p>
+				The measurements show that the five-axis prototype produced a
+				dimensional deviation of 0.95% under the tested conditions, compared
+				with 0.885% for the Bambu Lab A1 Mini print. The comparison also
+				demonstrated the support-free printing capability of the five-axis
+				approach for the tested bent geometry.
+			</p>
+
+			<hr />
+
+			<!-- Video Demonstration -->
+			<h2>Printing Demonstration</h2>
+
+			<p>
+				A timelapse video of the bent-cylinder printing process can be
+				viewed below.
+			</p>
+
+			<!--
+				After uploading the timelapse to YouTube, replace this comment
+				with the responsive YouTube embed.
+
+				Example:
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+						title="Five-axis 3D printing timelapse"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen>
+					</iframe>
+				</div>
+			-->
+
+			<p>
+				<em>Video demonstration coming soon.</em>
+			</p>
+
+			<hr />
+
+			<!-- Limitations -->
+			<h2>Limitations</h2>
+
+			<p>
+				The implemented orientation planning method relies on layer center
+				points to determine a dominant orientation for each Z-layer. As a
+				result, it cannot represent multiple branches that require different
+				orientations within the same layer. This limits its applicability
+				to more complex branching geometries.
+			</p>
+
+			<p>
+				Physical testing was also limited to the available experimental setup.
+				Additional model testing could not be completed after the printer bed
+				was damaged and my hardware teammate was no longer available.
+			</p>
+
+			<hr />
+
+			<!-- Contribution -->
+			<h2>Research Contribution</h2>
+
+			<p>
+				This work demonstrates the development and integration of a
+				segment-based slicing workflow for a five-axis 3D printer. My primary
+				contribution was the independent development of the slicer software,
+				including its geometric processing, orientation planning,
+				coordinate transformations, graphical interface, and G-code
+				processing workflow.
+			</p>
+
+			<p>
+				The physical experiment demonstrated the ability of the developed
+				system to print the tested 30-degree bent solid cylinder without
+				support structures, providing an initial validation of the
+				segment-based approach.
+			</p>
+
+			<!-- Full Thesis / Portfolio -->
+			<h3>Full Thesis</h3>
+
+			<p>
+				The complete undergraduate thesis, including detailed methodology,
+				implementation, and experimental results, is available in my portfolio.
+			</p>
+
+			<p>
+				<a href="https://ber-sento.github.io/" target="_blank">
+					Visit Portfolio
+				</a>
+			</p>
+
+			<!-- Footer -->
+			<footer>
+				<ul class="actions">
+					<li>
+						<a href="/research-experience/" class="button large">
+							Back to Research & Experience
+						</a>
+					</li>
+				</ul>
+
+				<ul class="stats">
+					<li><a href="#">Robotics</a></li>
+					<li><a href="#">Software Development</a></li>
+					<li><a href="#">Additive Manufacturing</a></li>
+					<li><a href="#">5-Axis Printing</a></li>
+				</ul>
+			</footer>
+
+		</article>
+
+	</div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
